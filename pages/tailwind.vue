@@ -4,7 +4,7 @@
       <div class="flex flex-col gap-2">
         <h4 class="text-2xl text-gray-700 font-bold">Basic Usages</h4>
         <card > 
-          <UIButton :color="'default'">Default</UIButton>
+          <UIButton  :color="'default'">Default</UIButton>
           <UIButton :color="'blue'">Blue</UIButton>
           <UIButton :color="'alternative'">Alternative</UIButton>
           <UIButton :color="'dark'">Dark</UIButton>
@@ -33,6 +33,13 @@
         <UIButton outline :color="'gray'">gray</UIButton>
       </card>
       <card> 
+        <UIButton loading loadingPosition="suffix" :color="'default'">Loading</UIButton>
+        <UIButton loading  loadingPosition="suffix" :color="'blue'" >Loading suffix </UIButton>
+        <UIButton loading  :color="'dark'">Loading</UIButton>
+        <UIButton loading  :color="'purple'">Loading</UIButton>
+        <UIButton loading disabled  :color="'tertiary'">Loading with disabled</UIButton>
+      </card>
+      <card> 
         <UIButton gradient="cyan-blue">Default</UIButton>
         <UIButton gradient="green-blue" >Blue</UIButton>
         <UIButton :gradient="'purple-blue'">purple-blue</UIButton>
@@ -48,6 +55,7 @@
         <UIButton size="lg" :color="'purple'">Large</UIButton>
         <UIButton size="xl" :color="'gray'">Extra Large</UIButton>
       </card>
+   
       <card> 
         <UIButton shadow="blue"  gradient="cyan-blue">Default</UIButton>
         <UIButton shadow="green"  gradient="green-blue" >Blue</UIButton>
