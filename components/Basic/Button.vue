@@ -1,103 +1,107 @@
 <template>
-    <button  :class="['lv-button',buttonClass,variant]" v-bind="$attrs" :type="type" >
-      <div v-if="$slots['prepend'] || icon" class="lv-button__prepend">
-        <slot name="prepend">
-          <div v-if="icon" class="lv-button__icon">
-            <i :class="icon" />
-          </div>
-        </slot>
-      </div>
-      <div class="lv-button__label">
-        <slot>
-          {{ label || '&nbsp;' }}
-        </slot>
-      </div>
-      <div v-if="$slots['append'] || iconRight" class="lv-button__append">
-        <slot name="append">
-          <div v-if="iconRight" class="lv-button__icon">
-            <i :class="iconRight" />
-          </div>
-        </slot>
-      </div>
-    </button>
-  </template>
+  <button
+    :class="['lv-button', buttonClass, variant]"
+    v-bind="$attrs"
+    :type="type"
+  >
+    <div v-if="$slots['prepend'] || icon" class="lv-button__prepend">
+      <slot name="prepend">
+        <div v-if="icon" class="lv-button__icon">
+          <i :class="icon" />
+        </div>
+      </slot>
+    </div>
+    <div class="lv-button__label">
+      <slot>
+        {{ label || "&nbsp;" }}
+      </slot>
+    </div>
+    <div v-if="$slots['append'] || iconRight" class="lv-button__append">
+      <slot name="append">
+        <div v-if="iconRight" class="lv-button__icon">
+          <i :class="iconRight" />
+        </div>
+      </slot>
+    </div>
+  </button>
+</template>
   
   <script>
-  export default {
-    props: {
-      icon: {
-        type: String,
-      },
-      variant:{
-        type:String,
-        default:'primary'
-      },
-      iconRight: {
-        type: String,
-      },
-      label: {
-        type: String,
-      },
-      loading: { 
-          type: Boolean,
-          default: false,
-      },
-      outlined: {
-        type: Boolean,
-        default: false,
-      },
-      push: {
-        type: Boolean,
-        default: false,
-      },
-      raised: {
-        type: Boolean,
-        default: false,
-      },
-      deepShadow: {
-        type: Boolean,
-        default: false,
-      },
-      deepShadowHover: {
-        type: Boolean,
-        default: false,
-      },
-  
-      rounded: {
-        type: Boolean,
-        default: false,
-      },
-      size: {
-        type: String,
-        default: 'md',
-        // validation: [TODO] for only possible values
-      },
-      type: {
-        type: String,
-        default: 'button',
-      },
+export default {
+  props: {
+    icon: {
+      type: String,
     },
-    computed: {
-      buttonClass() {
-        return {
-          '--icon-only': this.icon && !this.label,
-          '--rounded': this.rounded,
-          '--size-sm': this.size === 'sm',
-          '--size-md': this.size === 'md',
-          '--size-lg': this.size === 'lg',
-          '--size-xl': this.size === 'xl',
-          '--raised': this.raised,
-          '--deep-shadow-hover': this.deepShadowHover,
-          '--deep-shadow': this.deepShadow,
-          '--push': this.raised || this.outlined || this.push,
-          '--outlined': this.outlined,
-        };
-      },
+    variant: {
+      type: String,
+      default: "primary",
     },
-  };
-  </script>
+    iconRight: {
+      type: String,
+    },
+    label: {
+      type: String,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    outlined: {
+      type: Boolean,
+      default: false,
+    },
+    push: {
+      type: Boolean,
+      default: false,
+    },
+    raised: {
+      type: Boolean,
+      default: false,
+    },
+    deepShadow: {
+      type: Boolean,
+      default: false,
+    },
+    deepShadowHover: {
+      type: Boolean,
+      default: false,
+    },
+
+    rounded: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String,
+      default: "md",
+      // validation: [TODO] for only possible values
+    },
+    type: {
+      type: String,
+      default: "button",
+    },
+  },
+  computed: {
+    buttonClass() {
+      return {
+        "--icon-only": this.icon && !this.label,
+        "--rounded": this.rounded,
+        "--size-sm": this.size === "sm",
+        "--size-md": this.size === "md",
+        "--size-lg": this.size === "lg",
+        "--size-xl": this.size === "xl",
+        "--raised": this.raised,
+        "--deep-shadow-hover": this.deepShadowHover,
+        "--deep-shadow": this.deepShadow,
+        "--push": this.raised || this.outlined || this.push,
+        "--outlined": this.outlined,
+      };
+    },
+  },
+};
+</script>
   <style lang="scss">
- .lv-button {
+.lv-button {
   margin: 0;
   display: inline-flex;
   cursor: pointer;
@@ -157,21 +161,21 @@
   }
 }
 .primary {
-  --theme-color: #3C4CAD;
-  --theme-color-light: #C3C8E6;
-  --theme-color-dark: #2B367B;
+  --theme-color: #3c4cad;
+  --theme-color-light: #c3c8e6;
+  --theme-color-dark: #2b367b;
   --theme-color-inverse: #ffffff;
 }
 .secondary {
-  --theme-color: #1CA7EC;
-  --theme-color-light: #B9E4F9;
-  --theme-color-dark: #0F5C82;
+  --theme-color: #1ca7ec;
+  --theme-color-light: #b9e4f9;
+  --theme-color-dark: #0f5c82;
   --theme-color-inverse: #ffffff;
 }
 .tertiary {
-  --theme-color: #70CF88;
-  --theme-color-light: #D6F7DE;
-  --theme-color-dark: #447D52;
+  --theme-color: #70cf88;
+  --theme-color-light: #d6f7de;
+  --theme-color-dark: #447d52;
   --theme-color-inverse: #ffffff;
 }
 .info {
@@ -181,19 +185,19 @@
   --theme-color-inverse: #ffffff;
 }
 .warning {
-  --theme-color: #F9C449;
-  --theme-color-light: #FDEDC7;
-  --theme-color-dark: #896C28;
+  --theme-color: #f9c449;
+  --theme-color-light: #fdedc7;
+  --theme-color-dark: #896c28;
   --theme-color-inverse: #ffffff;
 }
 .danger {
-  --theme-color: #FF6464;
-  --theme-color-light: #FFE0E0;
-  --theme-color-dark: #C02828;
+  --theme-color: #ff6464;
+  --theme-color-light: #ffe0e0;
+  --theme-color-dark: #c02828;
   --theme-color-inverse: #ffffff;
 }
 
-.complementary{
+.complementary {
   --theme-color: #edf1f5 !important;
   --theme-color-light: #8ed8d6 !important;
   --theme-color-dark: #dfe5ea !important;
@@ -206,7 +210,8 @@
   border: none;
   padding: 12px 20px;
   font-size: 1rem;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, border-radius 0.3s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s, border-radius 0.3s;
   border-radius: 4px;
   &:enabled {
     &:hover {
@@ -252,7 +257,8 @@
   }
   /* Raised Buttons */
   &.--raised {
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
   // Buttons Hover Shadow
   &.--deep-shadow-hover:hover {
@@ -291,7 +297,7 @@
         border: 1px solid var(--theme-color);
       }
     }
-    &.lv--complementary{
+    &.lv--complementary {
       color: var(--theme-color-inverse);
       &:enabled {
         &:hover {
@@ -302,11 +308,10 @@
         &:active {
           background: rgba(33, 150, 243, 0.04);
           color: var(--theme-color-inverse);
-          border-color: var(--theme-color-inverse); 
+          border-color: var(--theme-color-inverse);
         }
       }
     }
-
   }
   &.--text-button {
     background-color: transparent;
@@ -324,7 +329,7 @@
         border-color: var(--theme-color);
       }
     }
-    &.lv--complementary{
+    &.lv--complementary {
       color: var(--theme-color-inverse);
       &:enabled {
         &:hover {
@@ -335,7 +340,7 @@
         &:active {
           background: rgba(33, 150, 243, 0.04);
           color: var(--theme-color-inverse);
-          border-color: var(--theme-color-inverse); 
+          border-color: var(--theme-color-inverse);
         }
       }
     }
@@ -365,8 +370,5 @@
     }
   }
 }
-
-
-
-  </style>
+</style>
   
