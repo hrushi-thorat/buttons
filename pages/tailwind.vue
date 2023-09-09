@@ -5,6 +5,12 @@
         <h4 class="text-2xl text-gray-700 font-bold">Basic Usages</h4>
         <card > 
           <UIButton  :color="'default'">Default</UIButton>
+          <UIButton loading :color="'default'">Loading</UIButton>
+          <UIButton outline  :color="'default'">Outline</UIButton>
+          <UIButton disabled  :color="'default'">Disabled</UIButton>
+        </card>
+        <card > 
+          <UIButton  :color="'default'">Default</UIButton>
           <UIButton :color="'blue'">Blue</UIButton>
           <UIButton :color="'alternative'">Alternative</UIButton>
           <UIButton :color="'dark'">Dark</UIButton>
