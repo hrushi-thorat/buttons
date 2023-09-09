@@ -15,7 +15,7 @@ const buttonColorClasses: ButtonClassMap<ButtonVariant> = {
   default: {
     default:
       'text-white bg-primary-500 focus:ring-4 focus:ring-primary-600 dark:bg-blue-600 focus:outline-none dark:focus:ring-blue-800',
-    blue: 'text-white bg-raca_btn-200  focus:ring-blue-100 dark:bg-blue-600 focus:outline-none dark:focus:ring-blue-800',
+    blue: 'text-white bg-blue-500  focus:ring-blue-100 dark:bg-blue-600 focus:outline-none dark:focus:ring-blue-800',
     alternative:
       'font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600',
     dark: 'text-white bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-700 dark:border-gray-700',
@@ -97,7 +97,7 @@ const buttonOutlineColorClasses: ButtonClassMap<Exclude<ButtonVariant, 'light' |
     gray: 'hover:text-gray-500 hover:border-gray-400',
 
     // Custom
-    primary: 'hover:text-white hover:border-primary-700',
+    primary: 'hover:text-primary-800 hover:border-primary-800',
     secondary: 'hover:text-secondary-500 hover:border-secondary-400',
     tertiary: 'hover:text-tertiary-500 hover:border-tertiary-400',
     success: 'hover:text-white hover:bg-success-500',
