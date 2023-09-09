@@ -9,7 +9,24 @@
          <basic-button variant="danger">Danger</basic-button>
          <basic-button variant="warning">Warning</basic-button>
          <basic-button variant="info">Info</basic-button>
-      
+      </card>
+      <card>
+         <basic-button  outlined variant="primary">Primary</basic-button>
+         <basic-button outlined variant="secondary">Secondary</basic-button>
+         <basic-button outlined variant="tertiary">Tertiary</basic-button>
+         <basic-button outlined variant="info">Info</basic-button>
+         <basic-button outlined variant="danger">Danger</basic-button>
+         <basic-button outlined variant="warning">Warning</basic-button>
+         <basic-button outlined variant="info">Info</basic-button>
+      </card>
+      <card>
+         <basic-button  raised variant="primary">Primary</basic-button>
+         <basic-button raised variant="secondary">Secondary</basic-button>
+         <basic-button raised variant="tertiary">Tertiary</basic-button>
+         <basic-button raised variant="info">Info</basic-button>
+         <basic-button raised variant="danger">Danger</basic-button>
+         <basic-button raised variant="warning">Warning</basic-button>
+         <basic-button raised variant="info">Info</basic-button>
       </card>
     </div>
   </docs-page-layout>

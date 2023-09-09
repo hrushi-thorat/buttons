@@ -1,5 +1,5 @@
 <template>
-    <button  :class="['lv-button',buttonClass,variant]" v-bind="$attrs" :type="type" v-on="listeners">
+    <button  :class="['lv-button',buttonClass,variant]" v-bind="$attrs" :type="type" >
       <div v-if="$slots['prepend'] || icon" class="lv-button__prepend">
         <slot name="prepend">
           <div v-if="icon" class="lv-button__icon">
@@ -23,8 +23,6 @@
   </template>
   
   <script>
-  // import Ripple from '@/components/ripple/Ripple';
-  
   export default {
     props: {
       icon: {
@@ -40,10 +38,10 @@
       label: {
         type: String,
       },
-      // loading: { // upcomming with needed slot
-      //     type: Boolean,
-      //     default: false,
-      // },
+      loading: { 
+          type: Boolean,
+          default: false,
+      },
       outlined: {
         type: Boolean,
         default: false,
@@ -95,18 +93,7 @@
           '--outlined': this.outlined,
         };
       },
-      listeners() {
-        return this.$listeners
-          ? {
-              // Depreciated in Vue 3
-              ...this.$listeners,
-            }
-          : {};
-      },
     },
-    // directives: {
-    //     'ripple': Ripple
-    // }
   };
   </script>
   <style lang="scss">
