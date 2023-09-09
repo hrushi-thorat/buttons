@@ -10,11 +10,22 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@vueuse/core": "^9.4.0",
+    "@types/node": "^18",
+    
+    "autoprefixer": "^10.4.15",
+    "classnames": "^2.3.2",
+    "flowbite": "^1.5.5",
     "nuxt": "^3.7.1",
+    "postcss": "^8.4.23",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2"
   },
   "dependencies": {
     "light-icons": "^1.0.10"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="light-scrollbar"
+    class="light-scrollbar bg-yellow"
     :class="`sidebar --theme-${theme} ${showDrawer ? 'show-drawer' : ''}`"
     @click="$emit('toggle-drawer')"
   >
@@ -97,8 +97,8 @@ export default {
           page_path: "/",
         },
         {
-          page_name: "Light Icons",
-          page_path: "",
+          page_name: "Tailwind",
+          page_path: "/tailwind",
         },
       ],
     },
