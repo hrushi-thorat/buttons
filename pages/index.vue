@@ -1,6 +1,9 @@
 <template>
     <docs-page-layout :title="$options.title" :description="$options.description" :demoList="$options.demoList" hasPlayground hasDocs>
-        
+        <div>
+          <card>   <basic-button :loading="true">hello</basic-button></card>
+      
+        </div>
     </docs-page-layout>
   </template>
   
@@ -9,6 +12,7 @@
   const pageDescription = 'Button is an extension to standard button element with an option to add icons and your custom theming.';
   
   export default {
+    layout:'default',
     head: {
       title: ' Buttons Documentation | LightVue',
       meta: [

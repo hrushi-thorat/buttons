@@ -1,6 +1,6 @@
 <template>
   <div
-    class="light-scrollbar"
+    class="light-scrollbar bg-yellow"
     :class="`sidebar --theme-${theme} ${showDrawer ? 'show-drawer' : ''}`"
     @click="$emit('toggle-drawer')"
   >

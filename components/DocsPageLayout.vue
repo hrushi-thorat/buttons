@@ -7,7 +7,6 @@
             <div style="display: flex">
               <h1>{{ title }}</h1>
               <div class="feature-intro__title-right">
-                
                 <slot name="title-right"></slot>
               </div>
 
@@ -26,7 +25,10 @@
         </div>
       </div>
 
-      <div class="content-section implementation" style="min-height: calc(100vh - 220px)">
+      <div
+        class="content-section implementation"
+        style="min-height: calc(100vh - 220px)"
+      >
         <div>
           <slot></slot>
         </div>
@@ -35,7 +37,7 @@
         </div>
       </div>
     </div>
-<!-- 
+    <!-- 
     <aside class="right-sidebar light-scrollbar">
       <ul>
         <li v-for="(item, i) in pageContents" :key="i" class="right-sidebar__nav-item">
@@ -75,8 +77,8 @@ export default {
 
   data() {
     return {
-      visibleCardId: '',
-      selectedTab: 'collection', //'api'
+      visibleCardId: "",
+      selectedTab: "collection", //'api'
       pageContents: [],
     };
   },
@@ -99,14 +101,14 @@ export default {
   methods: {
     selectTab(newTab) {
       this.selectedTab = newTab;
-      this.$router.push({ hash: newTab === 'api' ? '#docs' : '' });
+      this.$router.push({ hash: newTab === "api" ? "#docs" : "" });
     },
     initPageContents() {
       let pageContents = [];
       if (this.hasPlayground) {
         pageContents.push({
-          id: 'playground',
-          title: 'Playground',
+          id: "playground",
+          title: "Playground",
         });
       }
       if (this.demoList) {
@@ -114,8 +116,8 @@ export default {
       }
       if (this.hasDocs) {
         pageContents.push({
-          id: 'docs-api',
-          title: 'Docs API',
+          id: "docs-api",
+          title: "Docs API",
         });
       }
       this.pageContents = pageContents;
@@ -125,26 +127,29 @@ export default {
       let playground;
 
       let pageContents = [];
-      if (document.getElementsByClassName('docs-card')) {
-        allDocsCards = document.getElementsByClassName('docs-card');
+      if (document.getElementsByClassName("docs-card")) {
+        allDocsCards = document.getElementsByClassName("docs-card");
       }
-      if (document.getElementsByClassName('best__demo__wrapper')) {
-        playground = document.getElementsByClassName('best__demo__wrapper');
+      if (document.getElementsByClassName("best__demo__wrapper")) {
+        playground = document.getElementsByClassName("best__demo__wrapper");
       }
       if (playground[0]) {
         pageContents.push({
           id: playground[0].id,
-          title: 'Playground',
+          title: "Playground",
         });
       }
       if (allDocsCards) {
-        Array.from(allDocsCards).forEach(card => {
+        Array.from(allDocsCards).forEach((card) => {
           let id = card.id;
           let title = card.id
-            .split('-')
-            .join(' ')
-            .replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
-          pageContents.push({ id: id, title: title === 'Docs Api' ? 'Docs API' : title });
+            .split("-")
+            .join(" ")
+            .replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase());
+          pageContents.push({
+            id: id,
+            title: title === "Docs Api" ? "Docs API" : title,
+          });
         });
       }
       this.pageContents = pageContents;
@@ -166,7 +171,8 @@ $primary-color: #38b2ac;
   border-radius: 4px;
   overflow: hidden;
   margin: 0 0 2rem 0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
   .demo-tab {
     width: 50%;
