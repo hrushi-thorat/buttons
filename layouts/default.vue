@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
+  <div>
     <docs-layout>
+      <NuxtPage />
     </docs-layout>
   </div>
 </template>
@@ -12,6 +13,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import '../assets/scss/docsGlobal.scss'
+<style>
+
 </style>

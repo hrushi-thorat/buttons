@@ -97,8 +97,8 @@ export default {
           page_path: "/",
         },
         {
-          page_name: "Light Icons",
-          page_path: "",
+          page_name: "Tailwind",
+          page_path: "/tailwind",
         },
       ],
     },

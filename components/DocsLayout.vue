@@ -4,9 +4,7 @@
     <app-navigation-drawer :show-drawer="showDrawer" @toggle-drawer="toggleDrawer()" />
     <div class="page-wrap">
       <div class="page-content">
-        <slot name="page-content">
-          <nuxt-page />
-        </slot>
+        <slot></slot>
       </div>
     </div>
   </div>
