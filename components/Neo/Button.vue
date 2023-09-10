@@ -3,6 +3,7 @@
     :class="['neu-light', buttonClass, variant]"
     v-bind="$attrs"
     :type="type"
+    :disabled="disabled"
   >
     <div
       v-if="$slots['prepend'] || icon || loadingPosition === 'suffix'"
@@ -70,6 +71,10 @@ export default {
       default: "blue",
     },
     loading: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
       type: Boolean,
       default: false,
     },

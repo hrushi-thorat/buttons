@@ -17,7 +17,7 @@
             <neo-button loading  spinnerColor="gray" variant="action">Action</neo-button>
             <neo-button loading  spinnerColor="red" variant="danger">Danger</neo-button>
             <neo-button loading  spinnerColor="yellow" loadingPosition='suffix' variant="warn">Warn</neo-button>
-            <neo-button loading variant="active">Active</neo-button>
+            <neo-button loading variant="active"></neo-button>
         </card>
       </div>
     </docs-page-layout>
