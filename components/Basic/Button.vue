@@ -4,8 +4,16 @@
     v-bind="$attrs"
     :type="type"
   >
-    <div v-if="$slots['prepend'] || icon" class="lv-button__prepend">
-      <slot name="prepend">
+    <div
+      v-if="$slots['prepend'] || icon || loadingPosition === 'suffix'"
+      class="lv-button__prepend"
+    >
+      <UISpinner
+        v-if="loading && loadingPosition === 'suffix'"
+        :color="spinnerColor"
+        :size="spinnerSize"
+      />
+      <slot v-else name="prepend">
         <div v-if="icon" class="lv-button__icon">
           <i :class="icon" />
         </div>
@@ -16,8 +24,16 @@
         {{ label || "&nbsp;" }}
       </slot>
     </div>
-    <div v-if="$slots['append'] || iconRight" class="lv-button__append">
-      <slot name="append">
+    <div
+      v-if="$slots['append'] || iconRight || loadingPosition === 'prefix'"
+      class="lv-button__append"
+    >
+      <UISpinner
+        v-if="loading && loadingPosition === 'prefix'"
+        :color="spinnerColor"
+        :size="spinnerSize"
+      />
+      <slot v-else name="append">
         <div v-if="iconRight" class="lv-button__icon">
           <i :class="iconRight" />
         </div>
@@ -41,6 +57,18 @@ export default {
     },
     label: {
       type: String,
+    },
+    loadingPosition: {
+      type: String,
+      default: "prefix",
+    },
+    spinnerSize: {
+      type: String,
+      default: "4",
+    },
+    spinnerColor: {
+      type: String,
+      default: "blue",
     },
     loading: {
       type: Boolean,

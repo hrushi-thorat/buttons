@@ -26,6 +26,25 @@
         </card>
       </div>
       <div class="flex flex-col gap-2">
+        <h4 class="text-2xl text-gray-700 font-bold">Loading</h4>
+        <card>
+          <basic-button loading outlined variant="primary"
+            >Primary</basic-button
+          >
+          <basic-button
+            outlined
+            variant="warning"
+            loading
+            loadingPosition="suffix"
+            spinnerColor="yellow"
+            >Warning</basic-button
+          >
+          <basic-button loading spinnerColor="green" variant="tertiary"
+            >Tertiary</basic-button
+          >
+        </card>
+      </div>
+      <div class="flex flex-col gap-2">
         <h4 class="text-2xl text-gray-700 font-bold">Raised</h4>
         <card>
           <basic-button raised variant="primary">Primary</basic-button>
