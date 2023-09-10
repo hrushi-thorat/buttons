@@ -10,7 +10,7 @@ export default {};
 
 <style>
 .example_card-wrapper {
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
   padding: 20px !important;
   width: 100%;
   min-height: 100px;
