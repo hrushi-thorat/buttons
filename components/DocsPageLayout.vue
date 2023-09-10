@@ -237,7 +237,7 @@ $primary-color: #38b2ac;
   }
 }
 .main-center-area {
-  max-width: calc(100% - 200px);
+  max-width: 100%;
   flex: 1;
 }
 .documentation-link {

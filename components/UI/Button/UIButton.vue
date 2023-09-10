@@ -52,7 +52,7 @@ const props = defineProps({
   },
   color: {
     type: String as PropType<ButtonVariant>,
-    default: 'primary',
+    default: 'default',
   },
   gradient: {
     type: [String, null] as PropType<ButtonGradient | null>,

@@ -1,5 +1,5 @@
 <template>
-  <div class="example_card-wrapper bg-yellow-50">
+  <div class="example_card-wrapper gap-2 flex-wrap">
     <slot></slot>
   </div>
 </template>
@@ -10,7 +10,7 @@ export default {};
 
 <style>
 .example_card-wrapper {
-  background-color: #fff !important;
+  /* background-color: #fff !important; */
   padding: 20px !important;
   width: 100%;
   min-height: 100px;

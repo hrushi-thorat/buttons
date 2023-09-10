@@ -1,5 +1,5 @@
 <template>
-    <Title>RACA</Title>
+    <Title>Button</Title>
     <NuxtLayout>
     </NuxtLayout>
   </template>

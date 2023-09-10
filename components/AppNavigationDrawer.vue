@@ -100,6 +100,14 @@ export default {
           page_name: "Tailwind",
           page_path: "/tailwind",
         },
+        {
+          page_name: "Neumorphic",
+          page_path: "/neumorphic",
+        },
+        {
+          page_name: "Draft",
+          page_path: "/draft",
+        },
       ],
     },
   ],
